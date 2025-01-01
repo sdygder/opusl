@@ -238,14 +238,14 @@ int opus_encoder_init(OpusEncoder* st, opus_int32 Fs, int channels, int applicat
     st->silk_mode.maxInternalSampleRate     = 16000;
     st->silk_mode.minInternalSampleRate     = 8000;
     st->silk_mode.desiredInternalSampleRate = 16000;
-    st->silk_mode.payloadSize_ms            = 20;
-    st->silk_mode.bitRate                   = 25000;
+    st->silk_mode.payloadSize_ms            = 10;
+    st->silk_mode.bitRate                   = 128000;
     st->silk_mode.packetLossPercentage      = 0;
-    st->silk_mode.complexity                = 9;
+    st->silk_mode.complexity                = 10;
     st->silk_mode.useInBandFEC              = 0;
     st->silk_mode.useDRED                   = 0;
     st->silk_mode.useDTX                    = 0;
-    st->silk_mode.useCBR                    = 0;
+    st->silk_mode.useCBR                    = 1;
     st->silk_mode.reducedDependency         = 0;
 
     /* Create CELT encoder */
